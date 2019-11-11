@@ -1,10 +1,12 @@
 import React from 'react';
+import Tabela from './Tabela';
+
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <h1>Hello World</h1>
+      <Tabela />
     </div>
   );
 }
