@@ -1,38 +1,51 @@
 import React, { Component } from 'react';
-import Tabela from './Tabela';
+import Table from './Table';
 
 import './App.css';
 
 class App extends Component {
   state = {
-    autores: [
+    authors: [
       {
-        nome: 'Paulo',
-        livro: 'React',
-        preco: '1000'
+        name: 'Paulo',
+        book: 'React',
+        price: '1000'
       },
       {
-        nome: 'Daniel',
-        livro: 'Java',
-        preco: '99'
+        name: 'Daniel',
+        book: 'Java',
+        price: '99'
       },
       {
-        nome: 'Marcos',
-        livro: 'Design',
-        preco: '150'
+        name: 'Marcos',
+        book: 'Design',
+        price: '150'
       },
       {
-        nome: 'Bruno',
-        livro: 'DevOps',
-        preco: '100'
+        name: 'Bruno',
+        book: 'DevOps',
+        price: '100'
       }
     ]
   };
 
+  removeAuthor = index => {
+    const { authors } = this.state;
+
+    this.setState({
+      authors: authors.filter((author, initialPos) => {
+        return index !== initialPos;
+      })
+    });
+  }
+
   render() {
     return (
       <div className="App">
-        <Tabela autores={this.state.autores} />
+        <Table 
+          author={this.state.authors}
+          removeAuthor={this.removeAuthor}
+        />
       </div>
     );
   };
