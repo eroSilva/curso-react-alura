@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Table from './Table';
+import Form from './Form';
 
 import './App.css';
 
@@ -39,14 +40,23 @@ class App extends Component {
     });
   }
 
+  handleSubmit = author => {
+    this.setState({
+      authors: [...this.state.authors, author]
+    });
+  }
+
   render() {
     return (
-      <div className="App">
+      <>
         <Table 
           author={this.state.authors}
           removeAuthor={this.removeAuthor}
         />
-      </div>
+        <Form
+          handleSubmit={this.handleSubmit}
+        />
+      </>
     );
   };
 };
