@@ -29,28 +29,44 @@ class Form extends Component {
   render() {
     return(
       <form>
-        <label htmlFor="name">Nome</label>
-        <input
-          id="name"
-          type="text"
-          name="name"
-          value={this.state.name}
-          onChange={this.handleInput} />
-        <label htmlFor="book">Livro</label>
-        <input
-          id="book"
-          type="text"
-          name="book"
-          value={this.state.book}
-          onChange={this.handleInput} />
-        <label htmlFor="price">Preço</label>
-        <input
-          id="price"
-          type="text"
-          name="price"
-          value={this.state.price}
-          onChange={this.handleInput} />
-        <button type="button" onClick={this.submitForm}>Salvar </button>
+        <div className="row">
+          <div className="input-field col s4">
+            <label htmlFor="name">Nome</label>
+            <input
+              id="name"
+              type="text"
+              name="name"
+              value={this.state.name}
+              onChange={this.handleInput}
+              className="validade"
+            />
+          </div>
+          <div className="input-field col s4">
+            <label htmlFor="book">Livro</label>
+            <input
+              id="book"
+              type="text"
+              name="book"
+              value={this.state.book}
+              onChange={this.handleInput}
+              className="validade"
+            />
+          </div>
+          <div className="input-field col s4">
+            <label htmlFor="price">Preço</label>
+            <input
+              id="price"
+              type="text"
+              name="price"
+              value={this.state.price}
+              onChange={this.handleInput}
+              className="validade"
+            />
+          </div>
+          <div className="col s12">
+            <button type="button" className="waves-effect waves-light btn blue darken-3" onClick={this.submitForm}>Salvar </button>
+          </div>
+      </div>
     </form>
     )
   }
