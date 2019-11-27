@@ -1,8 +1,12 @@
 import React from 'react';
 
+import {
+  Wrapper
+} from './styled';
+
 const Header = () => {
   return (
-    <nav>
+    <Wrapper>
       <div className="nav-wrapper blue lighten-2">
         <div className="container">
           <a href="/" className="brand-logo">Logo</a>
@@ -13,7 +17,7 @@ const Header = () => {
           </ul>
         </div>
       </div>
-    </nav>
+    </Wrapper>
   )
 }
 

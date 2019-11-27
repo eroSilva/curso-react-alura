@@ -1,9 +1,7 @@
 import React, { Component } from 'react';
-import Header from './Header';
-import Table from './Table';
-import Form from './Form';
-
-import 'materialize-css/dist/css/materialize.min.css';
+import Header from './components/Header';
+import Table from './components/Table';
+import Form from './components/Form';
 
 class App extends Component {
   state = {
