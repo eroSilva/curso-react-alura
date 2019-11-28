@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 
+import Button from '../Button';
+
 class Form extends Component {
   constructor(props) {
     super(props);
@@ -64,7 +66,12 @@ class Form extends Component {
             />
           </div>
           <div className="col s12">
-            <button type="button" className="waves-effect waves-light btn blue darken-3" onClick={this.submitForm}>Salvar </button>
+            {/* <button type="button" className="waves-effect waves-light btn blue darken-3" onClick={this.submitForm}>Salvar </button> */}
+            <Button
+              backgroundColor='green'
+            >
+              Salvar
+            </Button>
           </div>
       </div>
     </form>

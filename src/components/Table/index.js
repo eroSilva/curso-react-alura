@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 
+import Button from '../Button';
+
 const TableHead = () => {
   return (
     <thead>
@@ -26,7 +28,14 @@ const TableBody = ({
             <td>{author.book}</td>
             <td>{author.price}</td>
             <td>
-              <button type="button" className="waves-effect waves-light btn red darken-3" onClick={() => removeAuthor(index)}>Remover</button>
+              {/* <button type="button" className="waves-effect waves-light btn red darken-3" onClick={() => removeAuthor(index)}>Remover</button> */}
+              <Button
+                backgroundColor='#f00'
+                indexAuthor={index}
+                removeAuthor={removeAuthor}
+              >
+                Remover
+              </Button>
             </td>
           </tr>
         );
